@@ -11,10 +11,25 @@
     <meta property="og:site_name" content="Inveto"/>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <title>Invento</title><!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/styles.css"/><!-- FONTS ICONS -->
+    <link rel="stylesheet" href="css/styles.css"/><!-- FONTS TEXT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,600;1,500&amp;family=Hind:wght@300&amp;display=swap" rel="stylesheet"/><!-- FONTS ICONS -->
     <script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script>
   </head>
-  <body><!-- CUSTOM SCRIPTS -->
+  <body>
+    <header>
+      <div class="logo"><a href="#"><i class="fas fa-gem"> </i>INVETO</a></div>
+      <div class="toggle" onclick="javascript:toggleMenu();"></div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#" onclick="javascript:toggleMenu();">Pricing</a></li>
+          <li><a href="#" onclick="javascript:toggleMenu();">About Us</a></li>
+          <li><a href="#" onclick="javascript:toggleMenu();">Testimonials</a></li>
+          <li><a class="btn" href="#" onclick="javascript:toggleMenu();">TRY FOR FREE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="dev"></div><!-- CUSTOM SCRIPTS -->
     <script src="js/scripts.js"></script>
   </body>
 </html>
