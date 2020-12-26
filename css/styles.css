@@ -8,12 +8,6 @@ body {
   font-family: "Hind", sans-serif;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0px auto;
-}
-
 a {
   text-decoration: none;
   color: #334050;
@@ -22,14 +16,16 @@ a {
 .btn {
   background: #334050;
   color: #fff;
-  padding: 10px 15px;
+  padding: 15px 20px;
   border-radius: 25px;
-  transition: all 300ms;
+  outline: none;
+  cursor: pointer;
+  transition: all 500ms;
 }
 
 .btn:hover {
   background: #fff;
-  color: #334050;
+  color: #334050 !important;
   box-shadow: 0px 0px 4px #334050;
 }
 
@@ -37,9 +33,45 @@ a {
   box-shadow: 0px 0px 12px #334050;
 }
 
+.btn-newsletter {
+  padding: 0px 40px;
+  background: #334050;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.btn-newsletter:hover {
+  box-shadow: 0px 0px 4px #334050;
+  transform: scale(1.05);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.d-block {
+  display: block;
+}
+
+section,
+footer {
+  padding: 30px;
+}
+
+p {
+  color: #727272;
+}
+
 header {
   position: fixed;
   width: 100%;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,18 +84,34 @@ header .logo {
   font-size: 1.3rem;
   display: flex;
   align-self: center;
+  letter-spacing: 3px;
 }
 header .logo a i {
+  transition: all 500ms;
   margin-right: 5px;
+}
+header .logo a:hover i {
+  color: #05dba3;
+}
+header .logo a:hover {
+  text-shadow: 0px 0px 4px #c5c5c5;
 }
 header .menu ul {
   display: flex;
+  align-items: center;
 }
 header .menu ul li {
   list-style-type: none;
 }
 header .menu ul li a {
   padding: 10px 25px;
+  transition: all 500ms;
+}
+header .menu ul li a:hover {
+  color: #05dba3;
+}
+header .menu ul li a.active {
+  color: #05dba3;
 }
 
 header.sticky {
@@ -72,10 +120,114 @@ header.sticky {
   box-shadow: 0px 0px 4px #c2c2c2;
 }
 
+section.banner {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+}
+section.banner .content {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+section.banner span {
+  font-weight: 700;
+  text-shadow: 0px 0px 4px #c5c5c5;
+}
+section.banner h1 {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 25px 0px;
+  font-family: "Archivo Narrow", sans-serif;
+}
+section.banner p {
+  width: 80%;
+}
+section.banner .icons {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+section.banner .icons div {
+  padding: 10px 45px 10px 0px;
+}
+section.banner .icons div i {
+  color: #05dba3;
+  padding-right: 5px;
+  font-size: 1.7rem;
+}
+section.banner form {
+  display: flex;
+  margin: 15px 0px;
+}
+section.banner form div {
+  position: relative;
+}
+section.banner form div.email {
+  flex-basis: 63%;
+}
+section.banner form div.placeholder {
+  display: flex;
+  align-items: center;
+}
+section.banner form div.placeholder i {
+  position: absolute;
+  top: -30px;
+  left: 15px;
+  pointer-events: none;
+  color: #334050;
+  font-size: 1.3rem;
+  transition: all 500ms;
+}
+section.banner form div.placeholder label {
+  position: absolute;
+  top: -33px;
+  left: 40px;
+  pointer-events: none;
+  color: #727272;
+  transition: all 500ms;
+}
+section.banner form input {
+  height: 45px;
+  border-radius: 20px;
+  outline: none;
+}
+section.banner form input[type=email] {
+  padding-left: 45px;
+  width: 100%;
+  font-size: 1rem;
+}
+section.banner form input[type=email]:focus ~ .placeholder label,
+section.banner form input[type=email]:valid ~ .placeholder label {
+  position: absolute;
+  top: -65px;
+  left: 15px;
+  color: #334050;
+  font-weight: 600;
+}
+section.banner form input[type=email]:focus ~ .placeholder i,
+section.banner form input[type=email]:valid ~ .placeholder i {
+  color: #05dba3;
+}
+section.banner form input[type=submit] {
+  margin-left: -40px;
+}
+section.banner .img {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+section.banner .img img {
+  width: 100%;
+}
+
 .dev {
   height: 1000px;
 }
 
+@media (max-width: 992px) {
+  section.banner h1 {
+    font-size: 3.2rem;
+  }
+}
 @media (max-width: 768px) {
   header {
     justify-content: space-between;
@@ -147,8 +299,36 @@ header.sticky {
     font-size: 24px;
   }
 
-  .btn {
-    padding: 5px;
+  section.banner {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  section.banner .content,
+section.banner .img {
+    flex-basis: 100%;
+  }
+  section.banner p {
+    width: 75%;
+  }
+}
+@media (max-width: 576px) {
+  section.banner h1 {
+    font-size: 2.2rem;
+  }
+  section.banner p {
+    width: 100%;
+  }
+  section.banner form {
+    flex-direction: column;
+  }
+  section.banner form .submit {
+    display: flex;
+    margin: 0px auto;
+    margin-top: 10px;
+  }
+  section.banner form input[type=submit] {
+    margin-left: 0px;
+    min-width: 300px;
   }
 }
 
