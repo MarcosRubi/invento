@@ -59,6 +59,25 @@ a {
   display: block;
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+.icons div {
+  padding: 10px 45px 10px 0px;
+}
+.icons div i {
+  color: #05dba3;
+  padding-right: 5px;
+  font-size: 1.7rem;
+}
+
 section,
 footer {
   padding: 30px;
@@ -66,6 +85,19 @@ footer {
 
 p {
   color: #727272;
+}
+
+span {
+  font-weight: 700;
+  text-shadow: 0px 0px 4px #c5c5c5;
+}
+
+h1,
+h2 {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 25px 0px;
+  font-family: "Archivo Narrow", sans-serif;
 }
 
 header {
@@ -124,40 +156,31 @@ header.sticky {
   box-shadow: 0px 0px 4px #334050;
 }
 
-section.banner {
-  margin-top: 80px;
-  display: flex;
-  align-items: center;
+section.banner,
+section.content-1 {
+  margin-top: 30px;
 }
-section.banner .content {
+section.banner .content,
+section.content-1 .content {
   flex-basis: 50%;
   flex-grow: 1;
 }
-section.banner span {
-  font-weight: 700;
-  text-shadow: 0px 0px 4px #c5c5c5;
-}
-section.banner h1 {
-  font-size: 4.5rem;
-  line-height: 1;
-  margin: 25px 0px;
-  font-family: "Archivo Narrow", sans-serif;
-}
-section.banner p {
+section.banner p,
+section.content-1 p {
   width: 80%;
 }
-section.banner .icons {
-  display: flex;
-  align-items: center;
-  margin: 15px 0px;
+section.banner .img,
+section.content-1 .img {
+  flex-basis: 50%;
+  flex-grow: 1;
 }
-section.banner .icons div {
-  padding: 10px 45px 10px 0px;
+section.banner .img img,
+section.content-1 .img img {
+  width: 100%;
 }
-section.banner .icons div i {
-  color: #05dba3;
-  padding-right: 5px;
-  font-size: 1.7rem;
+
+section.banner {
+  margin-top: 80px;
 }
 section.banner form {
   display: flex;
@@ -215,13 +238,6 @@ section.banner form input[type=email]:valid ~ .placeholder i {
 section.banner form input[type=submit] {
   margin-left: -40px;
 }
-section.banner .img {
-  flex-basis: 50%;
-  flex-grow: 1;
-}
-section.banner .img img {
-  width: 100%;
-}
 
 section.why-us .heading {
   text-align: center;
@@ -251,13 +267,22 @@ section.why-us .cards .card__body h3 {
   margin: 20px 0px 10px 0px;
 }
 
+section.content-1 .img {
+  padding-right: 50px;
+}
+
 .dev {
   height: 1000px;
 }
 
 @media (max-width: 992px) {
-  section.banner h1 {
+  h1,
+h2 {
     font-size: 3.2rem;
+  }
+
+  .heading h2 {
+    margin-bottom: 0px;
   }
 
   section.why-us .cards {
@@ -339,25 +364,48 @@ section.why-us .cards .card__body h3 {
     font-size: 24px;
   }
 
-  section.banner {
-    flex-direction: column;
+  section {
     padding: 30px 20px;
   }
+
+  section.banner,
+section.content-1 {
+    flex-direction: column;
+  }
   section.banner .content,
-section.banner .img {
+section.banner .img,
+section.content-1 .content,
+section.content-1 .img {
     flex-basis: 100%;
   }
-  section.banner p {
+  section.banner p,
+section.content-1 p {
     width: 75%;
+  }
+
+  section.content-1 {
+    flex-direction: column-reverse;
+  }
+  section.content-1 .img {
+    padding-right: 0px;
   }
 }
 @media (max-width: 576px) {
-  section.banner h1 {
+  .icons div {
+    padding: 10px 25px 10px 0px;
+  }
+
+  section.banner h1,
+section.banner h2,
+section.content-1 h1,
+section.content-1 h2 {
     font-size: 2.2rem;
   }
-  section.banner p {
+  section.banner p,
+section.content-1 p {
     width: 100%;
   }
+
   section.banner form {
     flex-direction: column;
   }
