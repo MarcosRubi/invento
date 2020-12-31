@@ -6,18 +6,19 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Inveto"/>
     <meta property="og:description" content="Página web creada con único propósito de practicar maquetación web"/>
-    <meta property="og:image" content="https://marcosrubi.github.io/charity/images/img2.webp"/>
-    <meta property="og:url" content="https://marcosrubi.github.io/charity/"/>
+    <meta property="og:image" content="https://marcosrubi.github.io/inveto/images/og-image.webp"/>
+    <meta property="og:url" content="https://marcosrubi.github.io/inveto/"/>
     <meta property="og:site_name" content="Inveto"/>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <title>Inveto</title><!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/styles.css"/><!-- FONTS TEXT -->
+    <link rel="stylesheet" href="css/styles.min.css"/><!-- FONTS TEXT -->
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,600;1,500&amp;family=Hind:wght@300&amp;display=swap" rel="stylesheet"/><!-- FONTS ICONS -->
-    <script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script><!-- ANIMATIONS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   </head>
   <body>
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
       <div class="logo"><a href="#"><i class="fas fa-gem"> </i>INVETO</a></div>
       <div class="toggle" onclick="javascript:toggleMenu();"></div>
       <nav class="menu">
@@ -32,7 +33,7 @@
       </nav>
     </header>
     <section class="banner d-flex">
-      <div class="content"><span class="d-block uppercase">#1 Investing App</span>
+      <div class="content" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true"><span class="d-block uppercase">#1 Investing App</span>
         <h1 class="capitalize">Every Spending <wbr> Counts. Invest It.</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, dicta rem? Quia blanditiis nostrum recusandae praesentium facilis qui, facere labore quam nisi est delectus tempore inventore suscipit, voluptates itaque ipsum.</p>
         <div class="icons uppercase">
@@ -51,29 +52,29 @@
           </div>
         </form>
       </div>
-      <div class="img"><img src="images/header.svg" alt=""/></div>
+      <div class="img" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"><img src="images/header.svg" loading="eager" alt=""/></div>
     </section>
-    <section class="why-us">
-      <div class="heading">
+    <section class="why-us" id="why-us">
+      <div class="heading" data-aos="fade-in" data-aos-duration="2000" data-aos-once="true">
         <h2 class="capitalize">Why Us</h2>
       </div>
       <div class="cards">
-        <div class="card">
-          <div class="card__header"><img src="images/saving.svg" alt=""/></div>
+        <div class="card" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
+          <div class="card__header"><img src="images/saving.svg" loading="lazy" alt=""/></div>
           <div class="card__body">
             <h3 class="uppercase">Trusted By Many </h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio corporis fugit illum beatae.</p>
           </div>
         </div>
-        <div class="card">
-          <div class="card__header"><img src="images/creditcard.svg" alt=""/></div>
+        <div class="card" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+          <div class="card__header"><img src="images/creditcard.svg" loading="lazy" alt=""/></div>
           <div class="card__body">
             <h3 class="uppercase">Serious Security </h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat dolores repellat voluptas perspiciatis quam nobis ut omnis? Explicabo, dolorem.</p>
           </div>
         </div>
-        <div class="card">
-          <div class="card__header"><img src="images/list.svg" alt=""/></div>
+        <div class="card" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+          <div class="card__header"><img src="images/list.svg" loading="lazy" alt=""/></div>
           <div class="card__body">
             <h3 class="uppercase">Friendly Support </h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam quibusdam odio atque, nesciunt ullam minus deserunt?</p>
@@ -81,9 +82,9 @@
         </div>
       </div>
     </section>
-    <section class="about-us-1 d-flex">
-      <div class="img"><img src="images/graphic.svg" alt=""/></div>
-      <div class="content"><span class="d-block uppercase">Why Us</span>
+    <section class="about-us-1 d-flex" id="about-us">
+      <div class="img" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true"><img src="images/graphic.svg" loading="lazy" alt=""/></div>
+      <div class="content" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"><span class="d-block uppercase">Why Us</span>
         <h2 class="capitalize">Make your money <wbr> grow rapidly.</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, dicta rem? Quia blanditiis nostrum recusandae praesentium facilis qui, facere labore quam nisi est delectus tempore inventore suscipit, voluptates itaque ipsum.</p>
         <div class="icons uppercase">
@@ -93,17 +94,17 @@
       </div>
     </section>
     <section class="about-us-2 d-flex">
-      <div class="content"><span class="d-block uppercase">Our role</span>
+      <div class="content" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true"><span class="d-block uppercase">Our role</span>
         <h2 class="capitalize">We take care of everything.</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, dicta rem? Quia blanditiis nostrum recusandae praesentium facilis qui, facere labore quam nisi est delectus tempore inventore suscipit, voluptates itaque ipsum.</p><a class="btn uppercase" href="#">Read More</a>
       </div>
-      <div class="img"><img src="images/finance.svg" alt=""/></div>
+      <div class="img" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true"><img src="images/finance.svg" loading="lazy" alt=""/></div>
     </section>
     <footer>
-      <div class="resume">
+      <div class="resume" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sit quod exercitationem expedita ab lorem ipsum Corrupti, soluta dignissimos.</p>
       </div>
-      <div class="content-links">
+      <div class="content-links" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
         <div class="links">
           <ul class="uppercase">
             <li><a href="">Products</a></li>
@@ -115,26 +116,26 @@
         </div>
         <div class="links">
           <ul class="uppercase">
-            <li><a href="">Products</a></li>
-            <li><a href="">Mobile App </a></li>
-            <li><a href="">Comunity</a></li>
-            <li><a href="">Pricing</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Mobile App </a></li>
+            <li><a href="#">Comunity</a></li>
+            <li><a href="#">Pricing</a></li>
           </ul>
         </div>
       </div>
-      <div class="social">
+      <div class="social" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
         <p class="capitalize">&copy; All rights reserved by <a href="#">Marcos Rubí</a></p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, modi.</p>
         <div class="social-icons">
           <ul class="d-flex">
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
           </ul>
         </div>
       </div>
-    </footer>
-    <div class="dev"></div><!-- CUSTOM SCRIPTS -->
+    </footer><!-- ANIMATIONS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script><!-- CUSTOM SCRIPTS -->
     <script src="js/scripts.js"></script>
   </body>
 </html>

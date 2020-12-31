@@ -26,3 +26,4 @@ window.onload = () => {
     })
 
 }
+AOS.init();
